@@ -8,28 +8,29 @@ namespace ccientifica
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        public static string Main(string[] args)
         {
-           EjecutarCalcu();
+        return EjecutarCalcu();
         }
 
-        public static string EjecutarCalcu()
+        public static double EjecutarCalcu()
         {
             Console.WriteLine("¡bienvenido a la calculadora cientifica! ¿qué operación te gustaría realizar? :D ");
-            MenuCalcu();
+            return MenuCalcu();
         }
 
-        public static void MenuCalcu()
+        public static double MenuCalcu()
         {
-            Console.WriteLine("¿qué quieres hacer? (1 o 2)");
+            
             Console.WriteLine("1. operaciones elementales (+, -, *, /) ");
             Console.WriteLine("2. otras");
             
             switch(Console.ReadLine()) 
             {
                 case "1":
-                    OperacionElem();
+                    return OperacionElem();
                     break;
+
 
                 case "2":
                     Console.WriteLine("has elegido realizar otra operación");
@@ -41,10 +42,25 @@ namespace ccientifica
             }
         }
 
+        public static double PedirNum()
+        {
+            double numerito1;
+            Console.WriteLine("dime un numerito");
+            numerito1 = Convert.ToDouble(Console.ReadLine());
+            return numerito1;
+
+            double numerito2;
+            Console.WriteLine("dime otro numerito :D");
+            numerito2 = Convert.ToDouble(Console.ReadLine());
+            return numerito2;
+
+
+        }
+
         public static double OperacionElem()
         {
             Console.Write("¡has elegido hacer una operacion elemental! ");
-            PedirNum();
+            return PedirNum();
             Console.Write("introduce 'suma', 'resta', 'multiplicacion' o 'division' ");
 
             switch(Console.ReadLine())
@@ -63,21 +79,6 @@ namespace ccientifica
                     break;
 
             }
-        }
-
-        public static double PedirNum()
-        {
-            double numerito1;
-            Console.WriteLine("dime un numerito");
-            numerito1 = Convert.ToDouble(Console.ReadLine());
-            return numerito1;
-
-            double numerito2;
-            Console.WriteLine("dime otro numerito :D");
-            numerito2 = Convert.ToDouble(Console.ReadLine());
-            return numerito2;
-
-
         }
 
      
