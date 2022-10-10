@@ -126,7 +126,26 @@ namespace ccientifica
         {
             double numPi = 3.14159;
             double numerito1;
-
+            numerito1 = PedirNum("dime un numerito");
+            Console.WriteLine("¿que te gustaria hacer con tu numero y el numero pi? (suma, resta, multiplicacion, division)");
+            
+            switch(Console.ReadLine() {
+                case "suma":
+                    Console.WriteLine("el total de la suma es " + numerito1 + numPi);
+                    break;
+                case "resta":
+                    Console.WriteLine("el total de la resta es " + numerito1 - numPi);
+                    break;
+                case "multiplicacion":
+                    Console.WriteLine("el total de la multiplicacion es "+ numerito1 * numPi);
+                    break;
+                case "division":
+                    Console.WriteLine("el total de la division es "+ numerito1/ numPi);
+                    break;
+                default:
+                    Console.WriteLine("no has introducido correctamente la operacion que quieres :(( pero que sepas que el numero pi es " + numPi);
+                    break;
+            }
         }
 
         static void FuncionesTrigonometricas()
