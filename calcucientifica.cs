@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace ccientifica
 {
     internal class Program
@@ -14,6 +13,7 @@ namespace ccientifica
         {
             Console.WriteLine("¡bienvenido a la calculadora cientifica! ¿qué operación te gustaría realizar? :D ");
             MenuCalcu();
+
         }
 
         public static void MenuCalcu()
@@ -76,19 +76,19 @@ namespace ccientifica
         static void OtrasOperaciones()
         {
             Console.WriteLine("¡has elegido hacer otro tipo de operacion! ¿que tipo de operacion te gustaria hacer?");
-            Console.WriteLine("1. funciones trigonometricas"); //hecho
-            Console.WriteLine("2. calcular valor absoluto"); //hecho
-            Console.WriteLine("3. calcular con numero pi"); //hecho
-            Console.WriteLine("4. calcular número factorial"); //hecho
-            Console.WriteLine("5. elevar un número al cuadrado"); //hecho
-            Console.WriteLine("6. calcular modulo"); //hecho
+            Console.WriteLine("1. funciones trigonometricas");
+            Console.WriteLine("2. calcular valor absoluto");
+            Console.WriteLine("3. calcular con numero pi");
+            Console.WriteLine("4. calcular número factorial");
+            Console.WriteLine("5. elevar un número al cuadrado");
+            Console.WriteLine("6. calcular modulo");
             Console.WriteLine("7. calcular inverso");
 
             switch (Console.ReadLine())
             {
                 case "1":
-                    FuncionesTrigonometricas();
                     Console.WriteLine("¡has elegido calcular las funciones trigonometricas!");
+                    FuncionesTrigonometricas();
                     break;
                 case "2":
                     Console.WriteLine("¡has elegido calcular el valor absoluto!");
@@ -120,7 +120,6 @@ namespace ccientifica
             }
 
         }
-
         static void CalcularValorAbsoluto()
         {
             double numerito = PedirNum("dime un numerito");
@@ -183,7 +182,6 @@ namespace ccientifica
             double numerito1 = PedirNum("dime un numerito que quieras elevar al cuadrado");
             double elevado = numerito1 * numerito1;
 
-
             Console.WriteLine("elevar al cuadrado el numerito {0} da {1}", numerito1, elevado);
         }
 
@@ -194,7 +192,6 @@ namespace ccientifica
             double numeroModulo = numerito1 % numerito2;
 
             Console.WriteLine("el modulo de {0} y {1} es {2}", numerito1, numerito2, numeroModulo);
-
         }
 
         static void CalcularInverso() 
@@ -217,18 +214,19 @@ namespace ccientifica
             switch (Console.ReadLine())
             {
                 case "1":
-                    CalcularSeno();
                     Console.WriteLine("has elegido calcular el seno");
+                    CalcularSeno();
                     break;
                 case "2":
-                    CalcularCoseno();
                     Console.WriteLine("has elegido calcular el coseno");
+                    CalcularCoseno();
                     break;
                 case "3":
-                    CalcularTangente();
                     Console.WriteLine("has elegido calcular la tangente");
+                    CalcularTangente();
                     break;
                 case "4":
+                    Console.WriteLine("has elegido calcular la hipotenusa");
                     CalcularHipotenusa();
                     break;
                 default:
@@ -246,7 +244,6 @@ namespace ccientifica
             double seno = catetoOpuesto / hipotenusa;
 
             Console.WriteLine("el seno es " + seno);
-
         }
 
         static void CalcularCoseno()
@@ -256,7 +253,6 @@ namespace ccientifica
             double coseno = catetoAdyacente / hipotenusa;
 
             Console.WriteLine("el coseno es " + coseno);
-
         }
 
         static void CalcularTangente()
@@ -268,7 +264,6 @@ namespace ccientifica
             Console.WriteLine("la tangente es " + tangente);
 
         }
-
         static void CalcularHipotenusa()
         {
             double cateto1 = PedirNum("dime el primer cateto");
@@ -278,7 +273,5 @@ namespace ccientifica
             Console.WriteLine("la hipotenusa es " + hipotenusa);
 
         }
-
-
-    }
+    } 
 }
